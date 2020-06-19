@@ -11,7 +11,7 @@ def set_args():
                         default="Evaluation",
                         type=str)
     parser.add_argument("--data_dir",
-                        default="/home/yunxuanxiao/xyx/data/HotpotQA",
+                        default="/media/disk2/jennybae/HotpotQA",
                         type=str,
                         help="The input data dir. Should contain the .tsv files (or other data files) for the task.")
     parser.add_argument("--bert_model", default='bert-base-cased', type=str,

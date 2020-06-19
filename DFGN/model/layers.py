@@ -4,7 +4,7 @@ from torch import nn
 import torch.nn.functional as F
 from torch.nn.utils import rnn
 from torch.autograd import Variable
-from utils import get_weights, get_act
+from ..utils import get_weights, get_act
 from pytorch_pretrained_bert.modeling import BertLayer
 
 
@@ -163,7 +163,8 @@ class AttentionLayer(nn.Module):
         self.attn_funcs = nn.ModuleList()
         for i in range(n_head):
             self.attn_funcs.append(
-                GATSelfAttention(in_dim=in_dim, out_dim=hid_dim // n_head, config=config, layer_id=layer_id, head_id=i))
+                GATSelfAttention(in_dim=in_dim, out_dim=hid_dim // n_head,
+                                 config=config, layer_id=layer_id, head_id=i))
 
         if in_dim != hid_dim:
             self.align_dim = nn.Linear(in_dim, hid_dim)
@@ -203,7 +204,7 @@ class InteractionLayer(nn.Module):
         :param entity_mapping: N x E x L
         :return: doc_state: N x L x out_dim, entity_state: N x L x out_dim (x2)
         """
-        expand_entity_state = torch.sum(entity_state.unsqueeze(2) * entity_mapping.unsqueeze(3), dim=1)  # N x E x L x d
+        expand_entity_state = torch.sum(entity_state.unsqueeze(2) * entity_mapping.unsqueeze(3), dim=1)
         input_state = torch.cat([expand_entity_state, doc_state], dim=2)
 
         if self.use_trans:

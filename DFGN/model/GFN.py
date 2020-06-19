@@ -1,5 +1,5 @@
-from model.layers import *
-
+# from model.layers import *
+from .layers import *
 
 class GraphFusionNet(nn.Module):
     """

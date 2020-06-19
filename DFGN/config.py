@@ -35,13 +35,13 @@ def set_config():
     # learning and log
     parser.add_argument("--epochs", type=int, default=30)
     parser.add_argument("--qat_epochs", type=int, default=5)
-    parser.add_argument("--batch_size", type=int, default=32)
+    parser.add_argument("--batch_size", type=int, default=8)
     parser.add_argument("--max_bert_size", type=int, default=8)
     parser.add_argument("--lr", type=float, default=2e-4)
     parser.add_argument('--decay', type=float, default=1.0)
     parser.add_argument('--early_stop_epoch', type=int, default=0)
     parser.add_argument("--verbose_step", default=50, type=int)
-    parser.add_argument("--grad_accumulate_step", default=1, type=int)
+    parser.add_argument("--grad_accumulate_step", default=4, type=int)
 
     parser.add_argument('--q_update', action='store_true', help='Whether update query')
     parser.add_argument('--basicblock_trans', action='store_true', help='transformer version basicblock')

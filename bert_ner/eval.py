@@ -149,7 +149,7 @@ if __name__=='__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--name', type=str, default='default')
     parser.add_argument('--ckpt_path', type=str, default='checkpoints/finetuning/5.pt')
-    parser.add_argument('--input_path', type=str, default='/home/yunxuanxiao/xyx/data/HotpotQA/Selected_Paras/train_paras_aug.json')
+    parser.add_argument('--input_path', type=str, default='/media/disk2/jennybae/HotpotQA/Selected_Paras/train_paras_aug.json')
     parser.add_argument('--output_path', type=str, default='output/out.json')
     parser.add_argument('--batch_size', type=int, default=32)
     parser.add_argument('--debug', action='store_true')
@@ -160,12 +160,12 @@ if __name__=='__main__':
 
     os.makedirs('output', exist_ok=True)
     if args.train:
-        args.input_path = '/home/yunxuanxiao/xyx/data/HotpotQA/Selected_Paras/train_paras_aug.json'
-        args.raw_input_path = '/home/yunxuanxiao/xyx/data/HotpotQA/hotpot_train_v1.1.json'
+        args.input_path = '/media/disk2/jennybae/HotpotQA/Selected_Paras/train_paras_aug.json'
+        args.raw_input_path = '/media/disk2/jennybae/HotpotQA/hotpot_train_v1.1.json'
         setname = 'train'
     elif args.dev:
-        args.input_path = '/home/yunxuanxiao/xyx/data/HotpotQA/Selected_Paras/dev_paras.json'
-        args.raw_input_path = '/home/yunxuanxiao/xyx/data/HotpotQA/hotpot_dev_distractor_v1.json'
+        args.input_path = '/media/disk2/jennybae/HotpotQA/Selected_Paras/dev_paras.json'
+        args.raw_input_path = '/media/disk2/jennybae/HotpotQA/hotpot_dev_distractor_v1.json'
         setname = 'dev'
 
     if args.use_query:

@@ -3,16 +3,16 @@ from os.path import join
 from tqdm import tqdm
 from pytorch_pretrained_bert.modeling import BertModel
 from model.GFN import *
-from utils import *
-from tools.data_iterator_pack import IGNORE_INDEX
+from .utils import *
+from .tools.data_iterator_pack import IGNORE_INDEX
 import numpy as np
 import queue
 import threading
 import time
 import random
-from config import set_config
-from tools.data_helper import DataHelper
-from text_to_tok_pack import *
+from .config import set_config
+from .tools.data_helper import DataHelper
+from .text_to_tok_pack import *
 
 BUF_SIZE = 5
 data_queue = queue.Queue(BUF_SIZE)
@@ -200,7 +200,7 @@ if __name__ == "__main__":
     eval_dataset = helper.dev_loader
 
     # Set Model
-    model = GraphFusionNet(config=args)
+    model = model.GFN.GraphFusionNet(config=args)
     model.cuda(model_gpu)
     model.train()
 

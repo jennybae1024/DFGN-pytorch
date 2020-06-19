@@ -461,7 +461,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
 
-    data_path = '/home/yunxuanxiao/xyx/data/HotpotQA/'
+    data_path = '/media/disk2/jennybae/HotpotQA/'
     dev_para_path = join(data_path, 'Selected_Paras', 'dev_paras.json')
     dev_full_path = join(data_path, 'hotpot_dev_distractor_v1.json')
     dev_entity_path = join(data_path, 'Selected_Paras', 'dev_entity.json')

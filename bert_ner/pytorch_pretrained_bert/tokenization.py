@@ -28,9 +28,9 @@ from .file_utils import cached_path
 logger = logging.getLogger(__name__)
 
 PRETRAINED_VOCAB_ARCHIVE_MAP = {
-    'bert-base-uncased': "/home/yunxuanxiao/xyx/data/BERT_Pretrained/bert-base-uncased-vocab.txt",
-    'bert-base-cased': "/home/yunxuanxiao/xyx/data/BERT_Pretrained/bert-base-cased-vocab.txt",
-    'bert-large-uncased': "/home/yunxuanxiao/xyx/data/BERT_Pretrained/bert-large-uncased-vocab.txt",
+    'bert-base-uncased': "/media/disk2/jennybae/bert-base-uncased-vocab.txt",
+    'bert-base-cased': "/media/disk2/jennybae/bert-base-cased-vocab.txt",
+    'bert-large-uncased': "/media/disk2/jennybae/bert-large-uncased-vocab.txt",
     # 'bert-base-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt",
     # 'bert-large-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-uncased-vocab.txt",
     # 'bert-base-cased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt",
